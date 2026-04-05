@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Coastal World palette */
+  --bg: #E8F4FA;
+  --bg-warm: #D6EEF8;
+  --sand: #B8956A;
+  --sand-dark: #8B6F4E;
+  --sand-light: #D4C4A8;
+  --shadow: rgba(60, 90, 120, 0.12);
+  --shadow-deep: rgba(60, 90, 120, 0.25);
+  --green: #5DAE5A;
+  --coral: #E8786A;
+  --sky: #6CB4D8;
+  --yellow: #F5C842;
+  --mint: #80CBC4;
+  --grass: #A5D6A7;
+  --ocean: #A8D8EA;
+  --pink: #E8A0B0;
+  --gold: #FFCC80;
+  --warm: #F5B87A;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Fredoka', sans-serif;
+  background: var(--bg);
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: none;
+}
+
+body {
+  margin: 0;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(168, 216, 234, 0.5) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 60%, rgba(128, 203, 196, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 90%, rgba(245, 200, 66, 0.15) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--sand-light) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}

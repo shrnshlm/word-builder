@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(scp -r /c/Git/word-builder/dist /c/Git/word-builder/server.js /c/Git/word-builder/package.json /c/Git/word-builder/package-lock.json root@146.190.62.227:~/word-builder/)",
+      "Bash(ssh root@146.190.62.227 \"mkdir -p ~/word-builder\")",
+      "Bash(scp /c/Git/word-builder/server.js /c/Git/word-builder/package.json /c/Git/word-builder/package-lock.json root@146.190.62.227:~/word-builder/)",
+      "Bash(scp -r /c/Git/word-builder/dist root@146.190.62.227:~/word-builder/)",
+      "Bash(scp /c/Git/word-builder/.env root@146.190.62.227:~/word-builder/)",
+      "Bash(ssh root@146.190.62.227 \"curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && apt-get install -y nodejs nginx 2>&1 | tail -5\")",
+      "Bash(ssh root@146.190.62.227 \"apt-get install -y nodejs 2>&1 | tail -3 && node -v && npm -v\")",
+      "Bash(ssh root@146.190.62.227 \"cd ~/word-builder && npm install --omit=dev 2>&1 | tail -5\")",
+      "Bash(ssh root@146.190.62.227 \"npm install -g pm2 2>&1 | tail -3\")",
+      "Bash(ssh root@146.190.62.227:*)"
+    ]
+  }
+}
